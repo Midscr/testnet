@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title test
+    each content, name in city.metaTags 
+      meta(name=name, content=content)
+  body
+    h1= "Продажа композитных бассейнов в " + city.prepositionalName
+    p= `Для изготовления стенок чаши в таких моделях используют специальные композитные материалы, довольно легкие, но при этом прочные. Вы можете приобрести композитный бассейн любой формы, который будет хорошо стыковаться со стенками котлована. Главное достоинство таких изделий – доступная цена на композитный бассейн в ${city.prepositionalName}. Мы предлагаем модели разных размеров и форм непосредственно от производителей, поэтому вы можете существенно сэкономить.`
+
+    footer
+      each item in cities
+        a(href='http://' + item.domainName + '.localhost:8080')= item.name

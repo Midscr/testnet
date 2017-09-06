@@ -1,0 +1,17 @@
+{
+  "author": "zz",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.15.4",
+    "body-parser": "^1.17.2",
+    "morgan": "^1.8.2",
+    "pug": "^2.0.0-rc.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha --reporter spec",
+    "postinstall": "npm rebuild node-sass",
+    "eslint": "eslint **/*.js"
+  }
+}
