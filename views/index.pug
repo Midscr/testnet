@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     title= city.title
-    meta(name=description, content=city.description)
+    meta(name="description", content=city.description)
+    link(rel="stylesheet", type="text/css", href="/dist/css/style.css")
   body
-    h1= "Адресные таблички на частный дом: цена в " + city.prepositionalCity
-    p Адресные таблички украшают многоквартирный дом, офисные здания, дачи и частные коттеджи.
+    wrapper
+      include ./header.pug
+      include ./form-calculation.pug
+      include ./reviews.pug
+      include ./sizes.pug
+      include ./video.pug
+      include ./delivery.pug
+      include ./order-payment.pug
+      include ./contact.pug
+      include ./map.pug
 
-    //- footer
-    //-   each item in cities
-    //-     a(href='http://' + item.domainName + '.localhost:3000')= item.name
-
-    a(href='http://' + city.cityEn + '.localhost:3000')= city.name
+    
+    footer
+      .foot__left
+        p информация на сайте не является публичной афертой и носит информационный характер
+        a(href="http://") адресные таблички
+        a(href="http://") светодиодные табло
+        a(href="http://") полноцветные бегущие строки
+        a(href="http://") бегущие строки
+      each item in cities
+        a(href='http://' + item.cityEn + '.localhost:3000')= item.city
